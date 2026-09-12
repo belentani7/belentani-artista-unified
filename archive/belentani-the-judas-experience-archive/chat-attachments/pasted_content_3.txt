@@ -1,0 +1,135 @@
+# THE JUDAS EXPERIENCE — BELENTANI AWARD
+
+Construye una **única aplicación web** en **HTML + CSS + JavaScript**, sin APK ni EXE, ejecutable en móvil y escritorio. La experiencia debe sentirse como un candidato a premio de diseño: cinematográfica, rápida y coherente.
+
+## Regla de oro
+
+**Usa mis fotografías reales como protagonista.** No generes ni sustituyas a Belentani con imágenes nuevas. Anima, recorta, ilumina y compón sobre mis fotos.
+
+## Dirección artística
+
+- Negro profundo, rojo intenso y acentos dorados.
+- Neón contenido, luz negra y reflejos elegantes.
+- Contrapicados, respiración visual y movimiento de cámara sugerido.
+- El traje rojo representa la transformación.
+
+## Narrativa
+
+**"¿Vale la pena la traición si el trauma es el desencadenante de la mutación cognitiva Omega?"**
+
+No respondas la pregunta; deja que el espectador la sienta.
+
+## Qué debe entregar
+
+1. **Hero cinematográfico** con mi fotografía y el título *The Judas Experience*.
+2. **Timeline visual** de la canción con escenas y progreso.
+3. **Storyboard interactivo** con planos, notas y estado (idea, generando, aprobado).
+4. **Modo móvil 9:16** y **modo cine 16:9** sin perder composición.
+5. **Rendimiento alto**: sin dependencias pesadas si no aportan valor.
+
+## Tono
+
+Elegante, sereno y poderoso. Nada de plantillas genéricas.
+
+## Cierre
+
+La última pantalla solo muestra esta frase, como si fuera un titular:
+
+> **"Vale la pena la traición si el trauma es el desencadenante de la mutación cognitiva Omega."**
+
+Y debajo, pequeño:
+
+**BELENTANI — THE JUDAS EXPERIENCE**
+Sí. Y ahora veo **el error exacto que cometió Manus**.
+
+Tú le dijiste:
+
+> “lee el TXT, mira las fotos, úsalas libremente, máximo potencial visual”
+
+y Manus interpretó:
+
+> **“voy a GENERAR activos visuales nuevos inspirados en Belentani.”**
+
+Por eso acabó diciendo **“Hero principal: Belentani generado con IA”**. Eso es justamente lo que ahora queremos evitar.
+
+Además, en tu instrucción original hay algo muy bueno que yo conservaría: **“mínimo uso de tokens”, “300 créditos”, “un solo comando”, “no preguntarme nada”, “web ejecutable en móvil”, “usa GitHub/Hugging Face/foros si ayudan”.** Esa filosofía es correcta.
+
+Lo que tenemos que cambiar es una regla que debe estar **arriba del todo y en mayúsculas**:
+
+> **LAS FOTOS PROPORCIONADAS SON LOS ACTIVOS VISUALES PRINCIPALES. NO GENERES NUEVAS FOTOS DE BELENTANI.**
+
+Y otra todavía más importante para tu idea del videoclip:
+
+> **SI UNA IMAGEN DE BELENTANI YA EXISTE EN LOS ARCHIVOS, USA ESA IMAGEN. PARA DARLE MOVIMIENTO, USA IMAGE-TO-VIDEO/ANIMACIÓN SOBRE ESA IMAGEN. NO CREES UN NUEVO BELENTANI MEDIANTE TEXT-TO-IMAGE.**
+
+Así el agente entiende:
+
+**archivo → fotografía real → animación → vídeo**
+
+y no:
+
+**archivo → inspiración → personaje IA nuevo.**
+
+También corregiría lo de “las fotos te darán contexto, úsalas libremente”, porque **“contexto”** es precisamente lo que le permitió reinterpretarlas. Mejor:
+
+> **“Las fotografías no son solamente referencias: son los activos originales que deben utilizarse directamente.”**
+
+Y si quieres conservar libertad para que genere cosas, la regla sería:
+
+**Belentani = usar fotos reales.**
+**Judas/escenarios/nave/público/arquitectura/VFX = puede generar.**
+
+Ahí sí tenemos la división perfecta. 😭
+
+Y otra cosa: **ese ZIP de 41,93 MB es exactamente el tipo de archivo que conviene que el agente abra y lea entero antes de hacer absolutamente nada**, porque tú ya le estás diciendo que el TXT contiene la verdadera información del proyecto. No debería haber saltado directamente a “Neon Apocalíptico” y generar tres assets.
+
+La instrucción correcta sería literalmente:
+
+> **“NO TOMES DECISIONES VISUALES DEFINITIVAS HASTA HABER LEÍDO COMPLETAMENTE EL TXT Y REVISADO LAS FOTOGRAFÍAS.”**
+
+Eso habría evitado buena parte de la cagada.
+# THE JUDAS EXPERIENCE — BELENTANI AWARD
+
+Construye una **única aplicación web** en **HTML + CSS + JavaScript**, sin APK ni EXE, ejecutable en móvil y escritorio. La experiencia debe sentirse como un candidato a premio de diseño: cinematográfica, rápida y coherente.
+
+## Regla de oro
+
+**Usa mis fotografías reales como protagonista.** No generes ni sustituyas a Belentani con imágenes nuevas. Anima, recorta, ilumina y compón sobre mis fotos.
+
+## Dirección artística
+
+- Negro profundo, rojo intenso y acentos dorados.
+- Neón contenido, luz negra y reflejos elegantes.
+- Contrapicados, respiración visual y movimiento de cámara sugerido.
+- El traje rojo representa la transformación.
+
+## Narrativa
+
+**"¿Vale la pena la traición si el trauma es el desencadenante de la mutación cognitiva Omega?"**
+
+No respondas la pregunta; deja que el espectador la sienta.
+
+## Qué debe entregar
+
+1. **Hero cinematográfico** con mi fotografía y el título *The Judas Experience*.
+2. **Timeline visual** de la canción con escenas y progreso.
+3. **Storyboard interactivo** con planos, notas y estado (idea, generando, aprobado).
+4. **Modo móvil 9:16** y **modo cine 16:9** sin perder composición.
+5. **Rendimiento alto**: sin dependencias pesadas si no aportan valor.
+
+## Tono
+
+Elegante, sereno y poderoso. Nada de plantillas genéricas.
+
+## Cierre
+
+La última pantalla solo muestra esta frase, como si fuera un titular:
+
+> **"Vale la pena la traición si el trauma es el desencadenante de la mutación cognitiva Omega."**
+
+Y debajo, pequeño:
+
+**BELENTANI — THE JUDAS EXPERIENCE**
+
+Y sí: **con esta conversación entiendo por qué me vas a pedir 30 prompts.** 😂
+Estamos afinando el “idioma” exacto para que Manus deje de improvisar como diseñador junior y empiece a comportarse como **agente ejecutor**.

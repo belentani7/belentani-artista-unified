@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#09080d" />
+  <meta name="description" content="Archivo vivo y galería 3D del universo artístico de Belentani." />
+  <title>BELENTANI / ARCHIVO VIVO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="topbar"><a class="brand" href="./">BELENTANI<span>®</span></a><span class="status"><i></i> ARCHIVO VIVO / <b id="count">00</b> PIEZAS</span><button id="shuffle" class="ghost">NUEVA VERSIÓN ↗</button></header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">ESTUDIO / MÚSICA / IMAGEN / CÓDIGO</div>
+      <h1>Una obra.<br><em>Muchas mutaciones.</em></h1>
+      <p class="intro">Un archivo visual navegable del universo de Belentani. Cada visita revela una versión distinta: portadas, experiencias Judas, interfaces Omega y laboratorios de sonido.</p>
+      <div class="hero-actions"><a class="primary" href="#gallery">ENTRAR AL ARCHIVO <span>↓</span></a><button id="auto" class="text-btn">ROTACIÓN AUTOMÁTICA <span class="dot"></span></button></div>
+    </section>
+    <section id="gallery" class="gallery-wrap">
+      <div class="section-head"><span>01 / SELECCIÓN DE ESTA VISITA</span><span id="rotation">ROTACIÓN PAUSADA</span></div>
+      <div id="featured" class="featured"></div>
+      <div class="section-head all"><span>02 / TODAS LAS VERSIONES</span><span>ARRASTRA PARA EXPLORAR</span></div>
+      <div id="grid" class="grid"></div>
+    </section>
+  </main>
+  <footer><span>BELENTANI / CREATIVE ARCHIVE</span><span>ORIGINALES PRESERVADOS · 2026</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>

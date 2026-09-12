@@ -1,0 +1,14 @@
+# Notificaciones operativas
+
+NOIACORE LAB usa el canal de notificación del propietario para alertas de fallos críticos en callbacks programados. La alerta se envía de forma best-effort, se deduplica durante quince minutos y solo contiene ruta, identificador de tarea, error truncado y una declaración explícita de que no se incluye cuerpo de solicitud, correo, token ni datos personales.
+
+| Evento                           | Punto de emisión                                                                  | Canal                                             | Estado                           |
+| -------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------- | -------------------------------- |
+| Fallo de `catalog-refresh`       | Catch del callback programado                                                     | `notifyOwner`                                     | Implementado                     |
+| Fallo de `growth-report`         | Catch del callback programado                                                     | `notifyOwner`                                     | Implementado                     |
+| Evento de contacto del embudo    | `metrics.recordBusinessEvent` cuando `event=contact_clicked`                      | `notifyOwner`, deduplicado y sin datos personales | Implementado                     |
+| Nuevo contacto real              | Primera creación de `emailDrafts` desde `admin.emailDraftIngest`                  | `notifyOwner`, deduplicado y sin datos personales | Implementado                     |
+| Nuevo correo entrante            | Filtro Gmail autorizado `label:clientes is:unread`                                | Solo draft interno; nunca envío automático        | Preparado; sin candidatos reales |
+| Avisos de job pausado o huérfano | Historial `automation_runs`; notificación inmediata no activada para evitar ruido | Panel administrativo                              | Implementado como observabilidad |
+
+La plataforma no envía respuestas externas ni notificaciones de correo a terceros desde esta capa. Un clic de contacto es un evento de interés, mientras que un nuevo contacto real se define aquí como la primera creación de un borrador a partir de un mensaje Gmail autorizado. La deduplicación se basa en `externalMessageId`; el contenido del mensaje, el remitente y el asunto nunca entran en el payload de la alerta.

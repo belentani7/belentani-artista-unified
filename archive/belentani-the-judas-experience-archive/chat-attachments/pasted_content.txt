@@ -1,0 +1,527 @@
+# AHORA CONSTRUYE LA EXPERIENCIA REAL
+
+No quiero solamente una landing page.
+
+Quiero una **GUI audiovisual interactiva** construida con:
+
+**HTML + CSS + JavaScript**
+
+y las tecnologías web adicionales que realmente aporten valor.
+
+Si WebGL, Canvas, Web Audio API, Three.js u otra tecnología disponible mejora una parte concreta, úsala.
+
+Pero no añadas dependencias solamente para aparentar complejidad.
+
+Quiero rendimiento real.
+
+---
+
+# LA WEB DEBE SENTIRSE COMO UN SISTEMA
+
+El usuario no debe entrar y encontrar:
+
+Hero.
+
+About.
+
+Music.
+
+Gallery.
+
+Contact.
+
+Eso es un portfolio.
+
+NO QUIERO ESO.
+
+Quiero que parezca que ha entrado dentro del sistema **JUDAS**.
+
+La navegación debe sentirse como explorar un universo.
+
+---
+
+# PANTALLA INICIAL
+
+La primera carga debe ser cinematográfica.
+
+Negro.
+
+Silencio.
+
+Un pequeño elemento visual.
+
+Una respiración.
+
+Una luz.
+
+Una textura.
+
+Después aparece progresivamente:
+
+# BELENTANI
+
+y debajo:
+
+## THE JUDAS EXPERIENCE
+
+No mostrar todo inmediatamente.
+
+Crear expectativa.
+
+El usuario debe sentir que está entrando en algo.
+
+---
+
+# INTERFAZ
+
+La interfaz debe ser minimalista pero poderosa.
+
+No quiero veinte botones.
+
+Quiero pocos controles.
+
+Pero cada uno debe tener personalidad.
+
+Por ejemplo:
+
+**ENTER JUDAS**
+
+**MUSIC**
+
+**ARCHIVE**
+
+**CHARACTERS**
+
+**PROTOCOL**
+
+**VISUALS**
+
+**TRANSMISSION**
+
+No tienen que ser exactamente estos.
+
+Puedes inventar mejores nombres si encajan con el universo.
+
+---
+
+# HERO INTERACTIVO
+
+Utiliza una de MIS FOTOGRAFÍAS REALES como protagonista.
+
+NO GENERES UNA NUEVA FOTO DE BELENTANI.
+
+La imagen puede:
+
+* reaccionar al cursor
+* reaccionar al movimiento del teléfono
+* tener profundidad
+* tener parallax
+* recibir iluminación dinámica
+* deformarse ligeramente
+* reaccionar al audio
+* revelar capas
+
+Pero conserva mi identidad.
+
+Quiero que parezca que la fotografía está viva.
+
+---
+
+# AUDIO REACTIVO
+
+Si el navegador permite acceder al audio:
+
+utiliza Web Audio API.
+
+El sonido puede modificar:
+
+* partículas
+* iluminación
+* intensidad del rojo
+* distorsión
+* escala
+* movimiento
+* ondas
+* elementos de interfaz
+
+La música debe formar parte de la interfaz.
+
+No quiero simplemente un reproductor HTML estándar.
+
+---
+
+# JUDAS PROTOCOL
+
+Crear una sección/experiencia llamada:
+
+# JUDAS PROTOCOL
+
+Debe parecer un sistema interno.
+
+Puede contener:
+
+* archivos
+* mensajes
+* fragmentos de historia
+* símbolos
+* fotografías
+* timestamps
+* personajes
+* escenas
+* información incompleta
+
+No reveles toda la historia de golpe.
+
+Haz que el usuario descubra cosas.
+
+---
+
+# LOS CINCO ARQUETIPOS
+
+Crear una experiencia interactiva.
+
+No quiero cinco tarjetas normales.
+
+Quiero que cada arquetipo pueda sentirse como una entidad.
+
+Al seleccionar uno:
+
+la interfaz cambia.
+
+Cambian:
+
+* iluminación
+* sonido
+* partículas
+* imagen
+* tipografía
+* texto
+* movimiento
+
+Cada arquetipo debe sentirse diferente.
+
+Pero todos deben pertenecer al mismo universo.
+
+---
+
+# BELENTANI
+
+Crear una sección dedicada al protagonista.
+
+No quiero un currículum.
+
+No quiero:
+
+“Belentani es cantante brasileño…”
+
+Quiero presentar al personaje/artista como una figura narrativa.
+
+Puede incluir:
+
+**BELENTANI**
+
+**194/195 CM**
+
+**ARTIST**
+
+**SINGER**
+
+**WARRIOR**
+
+**ARCHETYPE**
+
+pero de manera artística.
+
+Los datos reales deben aparecer solamente cuando tengan sentido.
+
+---
+
+# LA LLAVE
+
+La llave del videoclip también debe existir dentro de la web.
+
+No expliques inmediatamente qué es.
+
+Haz que el usuario pueda descubrirla.
+
+Cuando interactúe con ella:
+
+la interfaz puede desbloquear una parte oculta.
+
+Esto conecta el sitio con el videoclip.
+
+---
+
+# LA NAVE
+
+Crear una experiencia visual de transición.
+
+La nave puede funcionar como el sistema de navegación entre diferentes partes del universo.
+
+No hace falta modelar una nave 3D real si eso perjudica rendimiento.
+
+Puede hacerse mediante:
+
+capas,
+
+perspectiva,
+
+parallax,
+
+Canvas,
+
+WebGL,
+
+vídeo,
+
+fotografía,
+
+o composición.
+
+El resultado importa más que la tecnología utilizada.
+
+---
+
+# PERIÓDICO / TRANSMISIÓN
+
+Quiero una sección que parezca una transmisión periodística del universo.
+
+Titular:
+
+## ¿VALIÓ LA PENA LA TRAICIÓN SI EL TRAUMA FUE EL DESENCADENANTE DE LA MUTACIÓN COGNITIVA OMEGA?
+
+El tono debe ser deliberadamente serio.
+
+Como si un acontecimiento imposible hubiera sido documentado por los medios.
+
+No convertirlo en meme.
+
+La gracia está precisamente en tratarlo con absoluta solemnidad.
+
+Puede haber:
+
+* fecha
+* archivo
+* clasificación
+* fotografía
+* fragmentos de entrevista
+* titulares secundarios
+* datos incompletos
+
+---
+
+# THE JUDAS EXPERIENCE
+
+Crear una zona específica para el videoclip.
+
+Debe mostrar:
+
+**JUDAS**
+
+con acceso al contenido audiovisual.
+
+Pero quiero que el vídeo sea parte de la experiencia.
+
+Antes del vídeo puede haber una introducción.
+
+Durante el vídeo pueden aparecer elementos mínimos.
+
+Después del vídeo puede desbloquearse información.
+
+---
+
+# GALERÍA
+
+Las fotografías que he proporcionado deben utilizarse.
+
+Repito:
+
+**NO GENERES NUEVAS FOTOGRAFÍAS DE BELENTANI.**
+
+Utiliza las existentes.
+
+Puedes:
+
+* recortarlas
+* animarlas
+* crear profundidad
+* aplicar efectos
+* utilizarlas como capas
+* hacer transiciones
+* convertirlas en elementos interactivos
+
+Pero la fotografía original sigue siendo el origen.
+
+---
+
+# MOBILE
+
+La experiencia debe funcionar perfectamente en móvil.
+
+No quiero una versión desktop aplastada en una pantalla pequeña.
+
+Diseña específicamente para:
+
+**1080×1920 / 9:16**
+
+y después adapta a desktop.
+
+El usuario debe poder experimentar el universo con un teléfono normal.
+
+---
+
+# PERFORMANCE
+
+Tengo recursos limitados.
+
+No quiero gastar créditos innecesariamente.
+
+No generes activos que puedan crearse mediante CSS/JS.
+
+No generes imágenes nuevas si ya existe una fotografía adecuada.
+
+No generes vídeo si una animación web consigue el efecto.
+
+No utilices una API de pago si existe una alternativa local o gratuita razonable.
+
+Primero:
+
+**reutilizar**
+
+después:
+
+**procedural**
+
+después:
+
+**open source**
+
+y solamente después:
+
+**generación externa costosa.**
+
+---
+
+# CÓDIGO
+
+Quiero código real y funcional.
+
+No quiero mockups.
+
+No quiero botones falsos.
+
+No quiero:
+
+“aquí iría el vídeo”.
+
+Si existe un archivo:
+
+conéctalo.
+
+Si existe una interacción:
+
+hazla funcionar.
+
+Si algo todavía no puede implementarse:
+
+crea una arquitectura preparada para integrarlo posteriormente.
+
+---
+
+# DISEÑO
+
+Quiero que la web pueda competir visualmente con una experiencia artística profesional.
+
+No copies Apple.
+
+No copies Tesla.
+
+No copies Cyberpunk 2077.
+
+No copies ningún sitio concreto.
+
+Utiliza referencias solamente para entender:
+
+ritmo,
+
+calidad,
+
+espacio,
+
+tipografía,
+
+movimiento,
+
+interacción
+
+y dirección artística.
+
+La identidad final debe ser:
+
+# BELENTANI.
+
+---
+
+# EL OBJETIVO FINAL
+
+Cuando termine, quiero poder abrir la web desde el móvil y pensar:
+
+**“Esto no parece una página web.”**
+
+Quiero sentir:
+
+**“Estoy dentro de Judas.”**
+
+Y cuando alguien pregunte:
+
+> “¿Qué es esto?”
+
+la respuesta sea:
+
+# THE JUDAS EXPERIENCE
+
+No una web promocional.
+
+No un portfolio.
+
+No una plantilla.
+
+**Una obra audiovisual interactiva de Belentani.**
+
+---
+
+# EJECUTA
+
+Lee primero el archivo completo.
+
+Analiza las fotografías.
+
+Revisa los repositorios.
+
+Revisa los Skills disponibles.
+
+Reutiliza los activos existentes.
+
+Construye la GUI.
+
+Hazla funcional.
+
+Prueba desktop.
+
+Prueba móvil.
+
+Corrige errores.
+
+No me pidas decisiones pequeñas.
+
+No me hagas perder créditos generando cosas innecesarias.
+
+Y sobre todo:
+
+**NO GENERES UN NUEVO BELENTANI.**
+
+Mis fotografías son Belentani.
+
+Úsalas.
+
+Ahora construye.

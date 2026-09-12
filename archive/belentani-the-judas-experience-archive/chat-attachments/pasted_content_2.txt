@@ -1,0 +1,748 @@
+SÍ. Ahora viene la parte que hace que **no se quede en una web bonita**, sino que tenga arquitectura de experiencia y además sirva como **centro de producción de Judas**.
+
+```text
+CONTINUACIÓN — BELENTANI / THE JUDAS EXPERIENCE
+FASE: EXPERIENCE ENGINE + VIDEO LAB
+```
+
+## 1. CONVIERTE LA WEB EN UNA GUI DE PRODUCCIÓN
+
+La aplicación debe tener dos caras:
+
+### EXPERIENCE MODE
+
+Lo que ve el público.
+
+### JUDAS LAB
+
+El entorno de trabajo.
+
+Debe existir un cambio claro entre ambos modos.
+
+**EXPERIENCE → entrar en el universo.**
+
+**LAB → construirlo.**
+
+No quiero otra aplicación separada.
+
+Es el mismo sistema.
+
+---
+
+# 2. JUDAS LAB
+
+Crear una interfaz interna donde pueda gestionar el proyecto.
+
+Paneles:
+
+### PROJECT
+
+* Judas
+* versión principal
+* portugués
+* English V2
+
+### ASSETS
+
+* fotografías
+* audio
+* vídeos
+* fondos
+* elementos
+* referencias
+
+### SCENES
+
+Lista de escenas del videoclip.
+
+### TIMELINE
+
+Timeline completa de la canción.
+
+### CHARACTERS
+
+* Belentani
+* Judas
+* cinco arquetipos
+* niño
+* personajes secundarios
+
+### LOCATIONS
+
+* ciudad
+* nave
+* concierto
+* espacios interiores
+* espacios cósmicos
+* localizaciones adicionales
+
+### EXPORT
+
+* 16:9
+* 9:16
+* teaser
+* Reel
+* Short
+* trailer
+
+---
+
+# 3. ASSET MANAGER
+
+Los archivos originales deben permanecer intactos.
+
+No sobrescribir originales.
+
+Crear:
+
+```text
+/assets/original
+/assets/processed
+/assets/video
+/assets/audio
+/assets/export
+```
+
+Cada archivo debe conservar:
+
+* nombre
+* formato
+* resolución
+* tamaño
+* procedencia
+
+Y si es una fotografía de Belentani:
+
+marcarla como:
+
+**BELENTANI SOURCE**
+
+---
+
+# 4. IDENTIDAD VISUAL
+
+Crear una etiqueta interna:
+
+```text
+IDENTITY LOCK
+```
+
+Cuando un plano utilice una fotografía de Belentani, el sistema debe saber:
+
+> Este personaje debe conservar esta identidad.
+
+No modificar arbitrariamente:
+
+* rostro
+* proporciones
+* barba
+* cabello
+* edad aparente
+* estructura corporal
+
+Los efectos pueden cambiar.
+
+La identidad no.
+
+---
+
+# 5. SCENE BUILDER
+
+Crear una interfaz para construir escenas.
+
+Cada escena debe permitir definir:
+
+```text
+SCENE ID
+TIME IN
+TIME OUT
+AUDIO SECTION
+SOURCE IMAGE
+CHARACTER
+LOCATION
+ACTION
+CAMERA
+LIGHTING
+EFFECTS
+TRANSITION
+STATUS
+```
+
+Ejemplo:
+
+```text
+JUDAS_017
+
+01:42.2
+01:50.8
+
+CHORUS
+
+BELENTANI SOURCE #04
+
+BELENTANI
+
+CITY / NIGHT
+
+Turns toward Judas.
+
+LOW ANGLE
+CAMERA PUSH-IN
+
+RED BACKLIGHT
+BLACK SHADOWS
+
+GLITCH → CUT
+
+APPROVED
+```
+
+---
+
+# 6. NO QUIERO PROMPTS PERDIDOS
+
+Cada escena debe poder almacenar su prompt.
+
+Así podemos tener:
+
+**IMAGE PROMPT**
+
+**VIDEO PROMPT**
+
+**NEGATIVE PROMPT**
+
+**CAMERA**
+
+**MOTION**
+
+**REFERENCE**
+
+**MODEL**
+
+**VERSION**
+
+Esto permitirá repetir un plano sin empezar de cero.
+
+---
+
+# 7. VIDEO GENERATION QUEUE
+
+Crear una cola.
+
+Ejemplo:
+
+```text
+01  JUDAS_001     READY
+02  JUDAS_002     READY
+03  JUDAS_003     REVIEW
+04  JUDAS_004     APPROVED
+05  JUDAS_005     FAILED
+```
+
+Nunca generar 50 cosas simultáneamente si eso desperdicia créditos.
+
+Primero producir:
+
+**1 plano**
+
+→ revisar
+
+→ ajustar
+
+→ establecer configuración
+
+→ producir siguientes.
+
+---
+
+# 8. SISTEMA DE CRÉDITOS
+
+Tengo aproximadamente:
+
+# 300 CRÉDITOS
+
+Trátalos como un presupuesto de producción.
+
+Antes de utilizar una herramienta externa costosa:
+
+comprueba si puede resolverse gratuitamente.
+
+Prioridad:
+
+### 1
+
+HTML/CSS/JS
+
+### 2
+
+Canvas/Web Audio/Web APIs
+
+### 3
+
+Open source
+
+### 4
+
+GitHub
+
+### 5
+
+Hugging Face
+
+### 6
+
+modelos gratuitos
+
+### 7
+
+servicios externos
+
+No gastes créditos para producir algo que el navegador pueda hacer.
+
+---
+
+# 9. GITHUB INTELLIGENCE
+
+Cuando encuentre un repositorio útil:
+
+no simplemente lo descargues.
+
+Determina qué parte puede convertirse en módulo de Judas.
+
+Ejemplos:
+
+```text
+visualizer
+↓
+AUDIO ENGINE
+
+particles
+↓
+JUDAS ATMOSPHERE
+
+image-to-video
+↓
+MOTION ENGINE
+
+timeline
+↓
+SCENE ENGINE
+
+WebGL
+↓
+WORLD ENGINE
+```
+
+Quiero una arquitectura modular.
+
+---
+
+# 10. NO ME CREES UNA DEMO
+
+Importantísimo.
+
+No quiero:
+
+> “Aquí tienes una demostración conceptual.”
+
+Quiero:
+
+**una aplicación funcional.**
+
+Los botones tienen que hacer cosas.
+
+Los paneles tienen que funcionar.
+
+La navegación tiene que funcionar.
+
+Los archivos deben poder seleccionarse.
+
+Las escenas deben poder abrirse.
+
+La timeline debe poder manipularse.
+
+---
+
+# 11. VIDEO PLAYER
+
+Crear un reproductor cinematográfico.
+
+No utilizar solamente los controles nativos del navegador.
+
+Añadir:
+
+```text
+PLAY
+PAUSE
+FRAME
+TIMELINE
+SCENE MARKERS
+FULLSCREEN
+AUDIO
+SUBTITLES
+QUALITY
+ASPECT
+```
+
+Y marcadores:
+
+```text
+INTRO
+JUDAS
+CHORUS
+KEY
+RED SUIT
+SHIP
+CONCERT
+OMEGA
+FINAL
+```
+
+---
+
+# 12. TIMELINE
+
+La timeline debe sincronizar:
+
+**AUDIO**
+
+*
+
+**ESCENAS**
+
+*
+
+**EFECTOS**
+
+*
+
+**TEXTO**
+
+*
+
+**TRANSICIONES**
+
+Cuando muevo el cursor de la timeline:
+
+la interfaz debe saber qué escena corresponde.
+
+---
+
+# 13. MODO DIRECTOR
+
+Crear un botón:
+
+# DIRECTOR MODE
+
+Al activarlo, puedo recorrer el proyecto.
+
+Debe mostrar:
+
+```text
+CURRENT SCENE
+
+TIME
+
+AUDIO
+
+SOURCE
+
+ACTION
+
+CAMERA
+
+STATUS
+```
+
+Y botones:
+
+**PREVIOUS**
+
+**NEXT**
+
+**REGENERATE**
+
+**APPROVE**
+
+**REJECT**
+
+---
+
+# 14. REGENERAR NO SIGNIFICA EMPEZAR DE CERO
+
+Si un plano falla:
+
+no destruir la escena.
+
+Crear:
+
+```text
+JUDAS_017
+ ├─ V1
+ ├─ V2
+ ├─ V3
+ └─ FINAL
+```
+
+Así puedo comparar versiones.
+
+---
+
+# 15. FIVE ARCHETYPES ENGINE
+
+Los cinco arquetipos deben tener variables.
+
+Por ejemplo:
+
+```text
+ARCHETYPE
+COLOR
+MATERIAL
+LIGHT
+MOVEMENT
+SYMBOL
+SOUND
+BEHAVIOR
+```
+
+El sistema debe permitir modificarlos sin reconstruir toda la aplicación.
+
+---
+
+# 16. OMEGA MUTATION
+
+La **Mutación Cognitiva Omega** debe convertirse en un concepto visual.
+
+No quiero un texto explicándolo.
+
+Quiero que el sistema lo represente.
+
+Al principio:
+
+**Belentani observa.**
+
+Después:
+
+**Belentani comprende.**
+
+Después:
+
+**Belentani cambia.**
+
+Después:
+
+**Belentani controla.**
+
+La interfaz puede evolucionar progresivamente.
+
+Más información.
+
+Más capas.
+
+Más velocidad.
+
+Más complejidad.
+
+Hasta llegar al estado:
+
+# OMEGA
+
+---
+
+# 17. EL USUARIO DEBE DESCUBRIR
+
+No expliques todo.
+
+Oculta elementos.
+
+Ejemplos:
+
+una puerta que inicialmente parece decorativa.
+
+una coordenada.
+
+una fecha.
+
+una llave.
+
+un mensaje incompleto.
+
+un archivo bloqueado.
+
+un símbolo.
+
+Cuando el usuario encuentra determinadas cosas:
+
+se desbloquea contenido.
+
+---
+
+# 18. ARCHIVE
+
+Crear:
+
+# JUDAS ARCHIVE
+
+Con documentos ficticios del universo.
+
+Ejemplo:
+
+```text
+CASE 001
+SUBJECT: BELENTANI
+STATUS: ACTIVE
+
+CASE 002
+SUBJECT: JUDAS
+STATUS: UNKNOWN
+
+CASE 005
+EVENT: 14 FEBRUARY
+STATUS: CLASSIFIED
+
+CASE Ω
+MUTATION COGNITIVE OMEGA
+STATUS: [REDACTED]
+```
+
+Debe parecer un archivo serio.
+
+No un menú de videojuego.
+
+---
+
+# 19. PERIÓDICO
+
+Crear una pieza editorial dentro del universo.
+
+Titular:
+
+# ¿VALIÓ LA PENA LA TRAICIÓN SI EL TRAUMA FUE EL DESENCADENANTE DE LA MUTACIÓN COGNITIVA OMEGA?
+
+Subtítulo:
+
+**El caso Belentani continúa sin explicación oficial.**
+
+Después:
+
+fragmentos.
+
+fotografías.
+
+fechas.
+
+declaraciones.
+
+datos.
+
+No explicar completamente qué ocurrió.
+
+---
+
+# 20. FINAL
+
+La experiencia no debe terminar simplemente con:
+
+**CONTACT**
+
+Debe terminar con una sensación.
+
+Después del último momento de Judas:
+
+pantalla negra.
+
+respiración.
+
+una frase.
+
+Después:
+
+# BELENTANI
+
+Y finalmente:
+
+# JUDAS EXPERIENCE
+
+No inmediatamente.
+
+Deja unos segundos.
+
+Como créditos finales.
+
+---
+
+# 21. REGLA ARTÍSTICA FINAL
+
+Si tienes que elegir entre:
+
+**más elementos**
+
+o
+
+**mejor dirección artística**
+
+elige:
+
+# MEJOR DIRECCIÓN ARTÍSTICA.
+
+Si tienes que elegir entre:
+
+**efecto espectacular**
+
+o
+
+**efecto que cuenta algo**
+
+elige:
+
+# EL QUE CUENTA ALGO.
+
+Si tienes que elegir entre:
+
+**generar una imagen nueva**
+
+o
+
+**hacer que una fotografía real de Belentani cobre vida**
+
+elige:
+
+# HACER COBRAR VIDA A LA FOTOGRAFÍA REAL.
+
+---
+
+# AHORA EJECUTA
+
+No me preguntes:
+
+“¿qué color quieres?”
+
+“¿qué animación quieres?”
+
+“¿qué estructura quieres?”
+
+“¿qué tecnología quieres?”
+
+Toma decisiones profesionales.
+
+Utiliza el material.
+
+Utiliza los repositorios.
+
+Utiliza los Skills adecuados.
+
+Utiliza las tecnologías web adecuadas.
+
+Optimiza el presupuesto.
+
+Y construye.
+
+# BELENTANI
+
+## THE JUDAS EXPERIENCE
+
+### AWARD-LEVEL WEB EXPERIENCE
+
+**No quiero que parezca que podría ganar un premio.**
+
+**Quiero que el resultado sea lo suficientemente bueno como para que alguien tenga que considerar darle uno.**

@@ -1,0 +1,97 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1786773790979,
+      "tag": "0000_third_rocket_racer",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1786773970689,
+      "tag": "0001_unique_mystique",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1786775179814,
+      "tag": "0002_small_speed",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1786775489535,
+      "tag": "0003_tough_retro_girl",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1786776059657,
+      "tag": "0004_boring_aaron_stack",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1786776293349,
+      "tag": "0005_mighty_maverick",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1786777404017,
+      "tag": "0006_wide_mimic",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1786779478766,
+      "tag": "0007_even_synch",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1786781254980,
+      "tag": "0008_serious_bullseye",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1786781472234,
+      "tag": "0009_curvy_warhawk",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1786781850838,
+      "tag": "0010_moaning_machine_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1786781972550,
+      "tag": "0011_complex_orphan",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "5",
+      "when": 1786784045801,
+      "tag": "0012_complex_baron_strucker",
+      "breakpoints": true
+    }
+  ]
+}

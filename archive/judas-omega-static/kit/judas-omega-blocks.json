@@ -1,0 +1,442 @@
+{
+  "titulo": "JUDAS OMEGA · Videoclip 5 min",
+  "duracionTotalSeg": 300,
+  "nBloques": 60,
+  "duracionPorBloque": 5,
+  "aspectRatio": "16:9",
+  "esteticaConsistente": "BELENTANI/JUDAS/OMEGA. Camara lenta ceremonial, low key extremo, neones magenta sobre fondo negro, rojo sangre, oro antiguo, vidrio negro, humo denso, particulas suspendidas. Figura central androgina escultural, piel como materia viva (obsidiana, porcelana, metal lacado). Push-in suave, fisico, ceremonial, sin look corporativo ni UI. 24fps brutalista, high-end cinematic.",
+  "capitulos": [
+    "C1 ORIGEN",
+    "C2 NOMBRE",
+    "C3 CUERPO",
+    "C4 ARCHIVO",
+    "C5 HERIDA",
+    "C6 SENAL",
+    "C7 PORTAL",
+    "C8 OMEGA",
+    "C9 CODA",
+    "C10 EXTENSION"
+  ],
+  "bloques": [
+    {
+      "n": 1,
+      "capitulo": "C1 ORIGEN",
+      "time": "00:00",
+      "s": 0,
+      "prompt": "Negro absoluto. Un pulso magenta abre una grieta minima en una superficie de vidrio."
+    },
+    {
+      "n": 2,
+      "capitulo": "C1 ORIGEN",
+      "time": "00:05",
+      "s": 5,
+      "prompt": "Macro de piel humeda y polvo flotando. La luz roza una cicatriz."
+    },
+    {
+      "n": 3,
+      "capitulo": "C1 ORIGEN",
+      "time": "00:10",
+      "s": 10,
+      "prompt": "Ojos en penumbra. Reflejo de una corona fragmentada dentro de la pupila."
+    },
+    {
+      "n": 4,
+      "capitulo": "C1 ORIGEN",
+      "time": "00:15",
+      "s": 15,
+      "prompt": "Agua negra vibra sobre una mesa de metal. Una gota cae como una señal."
+    },
+    {
+      "n": 5,
+      "capitulo": "C1 ORIGEN",
+      "time": "00:20",
+      "s": 20,
+      "prompt": "Plano medio de una figura inmovil en un cuarto casi vacio. El aire parece denso."
+    },
+    {
+      "n": 6,
+      "capitulo": "C1 ORIGEN",
+      "time": "00:25",
+      "s": 25,
+      "prompt": "La figura gira apenas la cabeza. El fondo se comprime como si el espacio escuchara."
+    },
+    {
+      "n": 7,
+      "capitulo": "C2 NOMBRE",
+      "time": "00:30",
+      "s": 30,
+      "prompt": "Letras de luz aparecen en el humo y se rompen al tocarlas."
+    },
+    {
+      "n": 8,
+      "capitulo": "C2 NOMBRE",
+      "time": "00:35",
+      "s": 35,
+      "prompt": "Mano sobre vidrio oscuro. La huella queda como un archivo de calor."
+    },
+    {
+      "n": 9,
+      "capitulo": "C2 NOMBRE",
+      "time": "00:40",
+      "s": 40,
+      "prompt": "Close-up de labios que no cantan aun. Solo respiracion y tension."
+    },
+    {
+      "n": 10,
+      "capitulo": "C2 NOMBRE",
+      "time": "00:45",
+      "s": 45,
+      "prompt": "Un espejo muestra otro rostro por un frame y luego vuelve al presente."
+    },
+    {
+      "n": 11,
+      "capitulo": "C2 NOMBRE",
+      "time": "00:50",
+      "s": 50,
+      "prompt": "Tinta azul se expande en el aire como memoria liquida."
+    },
+    {
+      "n": 12,
+      "capitulo": "C2 NOMBRE",
+      "time": "00:55",
+      "s": 55,
+      "prompt": "La figura camina hacia la camara. El nombre deja de ser texto y se vuelve peso."
+    },
+    {
+      "n": 13,
+      "capitulo": "C3 CUERPO",
+      "time": "01:00",
+      "s": 60,
+      "prompt": "Contraluz dorado recorta hombros y claviculas como si fueran estatua viva."
+    },
+    {
+      "n": 14,
+      "capitulo": "C3 CUERPO",
+      "time": "01:05",
+      "s": 65,
+      "prompt": "Macro de poros, brillo y sombra. La piel es una superficie ceremonial."
+    },
+    {
+      "n": 15,
+      "capitulo": "C3 CUERPO",
+      "time": "01:10",
+      "s": 70,
+      "prompt": "Un cuerpo se cubre con un material metalico flexible que respira."
+    },
+    {
+      "n": 16,
+      "capitulo": "C3 CUERPO",
+      "time": "01:15",
+      "s": 75,
+      "prompt": "Planos intercalados de manos, nuca, pecho, cuello, dedos, respiracion."
+    },
+    {
+      "n": 17,
+      "capitulo": "C3 CUERPO",
+      "time": "01:20",
+      "s": 80,
+      "prompt": "La camara orbita lentamente la figura. Cada giro revela una nueva capa de herida y lujo."
+    },
+    {
+      "n": 18,
+      "capitulo": "C3 CUERPO",
+      "time": "01:25",
+      "s": 85,
+      "prompt": "Un destello blanco corta la escena y deja la silueta suspendida."
+    },
+    {
+      "n": 19,
+      "capitulo": "C4 ARCHIVO",
+      "time": "01:30",
+      "s": 90,
+      "prompt": "Pasillos de archivador viviente. Carpetas, pantallas y placas de vidrio flotan en silencio."
+    },
+    {
+      "n": 20,
+      "capitulo": "C4 ARCHIVO",
+      "time": "01:35",
+      "s": 95,
+      "prompt": "Fotografias evaporadas se pegan a una pared de humo."
+    },
+    {
+      "n": 21,
+      "capitulo": "C4 ARCHIVO",
+      "time": "01:40",
+      "s": 100,
+      "prompt": "La figura extrae un objeto de una cavidad luminosa, como si abriera un recuerdo."
+    },
+    {
+      "n": 22,
+      "capitulo": "C4 ARCHIVO",
+      "time": "01:45",
+      "s": 105,
+      "prompt": "Primer plano de manos pasando paginas de luz, no papel."
+    },
+    {
+      "n": 23,
+      "capitulo": "C4 ARCHIVO",
+      "time": "01:50",
+      "s": 110,
+      "prompt": "El archivo late. Cada pulso cambia el color del cuarto."
+    },
+    {
+      "n": 24,
+      "capitulo": "C4 ARCHIVO",
+      "time": "01:55",
+      "s": 115,
+      "prompt": "La figura mira a camara y el archivo se cierra solo."
+    },
+    {
+      "n": 25,
+      "capitulo": "C5 HERIDA",
+      "time": "02:00",
+      "s": 120,
+      "prompt": "Una linea roja abre la oscuridad como si fuera una costura rota."
+    },
+    {
+      "n": 26,
+      "capitulo": "C5 HERIDA",
+      "time": "02:05",
+      "s": 125,
+      "prompt": "La tinta azul y el rojo sangre se encuentran en el aire sin mezclarse."
+    },
+    {
+      "n": 27,
+      "capitulo": "C5 HERIDA",
+      "time": "02:10",
+      "s": 130,
+      "prompt": "Insectos de luz atraviesan la escena en silencio."
+    },
+    {
+      "n": 28,
+      "capitulo": "C5 HERIDA",
+      "time": "02:15",
+      "s": 135,
+      "prompt": "La figura sostiene la herida como una fuente de energia."
+    },
+    {
+      "n": 29,
+      "capitulo": "C5 HERIDA",
+      "time": "02:20",
+      "s": 140,
+      "prompt": "Plano detalle: borde de corte, sal, polvo, sudor, temple."
+    },
+    {
+      "n": 30,
+      "capitulo": "C5 HERIDA",
+      "time": "02:25",
+      "s": 145,
+      "prompt": "La herida se convierte en simbolo, no en dolor."
+    },
+    {
+      "n": 31,
+      "capitulo": "C6 SENAL",
+      "time": "02:30",
+      "s": 150,
+      "prompt": "Un haz de luz atraviesa niebla densa y dibuja una flecha invisible."
+    },
+    {
+      "n": 32,
+      "capitulo": "C6 SENAL",
+      "time": "02:35",
+      "s": 155,
+      "prompt": "El espacio responde con vibracion geometrica."
+    },
+    {
+      "n": 33,
+      "capitulo": "C6 SENAL",
+      "time": "02:40",
+      "s": 160,
+      "prompt": "Un diamante ritual emerge del suelo como una antena de memoria."
+    },
+    {
+      "n": 34,
+      "capitulo": "C6 SENAL",
+      "time": "02:45",
+      "s": 165,
+      "prompt": "El cuerpo se alinea con la senal y la escena se vuelve mas silenciosa."
+    },
+    {
+      "n": 35,
+      "capitulo": "C6 SENAL",
+      "time": "02:50",
+      "s": 170,
+      "prompt": "Microcortes de ojos, dedos, metal, humo, oro, negro."
+    },
+    {
+      "n": 36,
+      "capitulo": "C6 SENAL",
+      "time": "02:55",
+      "s": 175,
+      "prompt": "La senal abre un corredor vivo al fondo del encuadre."
+    },
+    {
+      "n": 37,
+      "capitulo": "C7 PORTAL",
+      "time": "03:00",
+      "s": 180,
+      "prompt": "Portal organico hecho de materia respirante, vidrio blando y luz liquida."
+    },
+    {
+      "n": 38,
+      "capitulo": "C7 PORTAL",
+      "time": "03:05",
+      "s": 185,
+      "prompt": "La figura toca el borde y la superficie responde como piel."
+    },
+    {
+      "n": 39,
+      "capitulo": "C7 PORTAL",
+      "time": "03:10",
+      "s": 190,
+      "prompt": "La camara atraviesa el portal con un movimiento fluido."
+    },
+    {
+      "n": 40,
+      "capitulo": "C7 PORTAL",
+      "time": "03:15",
+      "s": 195,
+      "prompt": "Espacio nuevo: inmenso, abstracto, casi inmersivo, con gravedad rara."
+    },
+    {
+      "n": 41,
+      "capitulo": "C7 PORTAL",
+      "time": "03:20",
+      "s": 200,
+      "prompt": "La figura flota un instante entre dos mundos."
+    },
+    {
+      "n": 42,
+      "capitulo": "C7 PORTAL",
+      "time": "03:25",
+      "s": 205,
+      "prompt": "Un estallido magenta y oro sella el paso."
+    },
+    {
+      "n": 43,
+      "capitulo": "C8 OMEGA",
+      "time": "03:30",
+      "s": 210,
+      "prompt": "Todo converge en una forma final: cuerpo, archivo, herida, senal y portal."
+    },
+    {
+      "n": 44,
+      "capitulo": "C8 OMEGA",
+      "time": "03:35",
+      "s": 215,
+      "prompt": "La figura ya no posa: reina, pero en silencio."
+    },
+    {
+      "n": 45,
+      "capitulo": "C8 OMEGA",
+      "time": "03:40",
+      "s": 220,
+      "prompt": "Planos sucesivos de piel, oro, humo, mirada, diamante, agua negra."
+    },
+    {
+      "n": 46,
+      "capitulo": "C8 OMEGA",
+      "time": "03:45",
+      "s": 225,
+      "prompt": "El espacio se abre en un horizonte negro con un pulso de luz blanca."
+    },
+    {
+      "n": 47,
+      "capitulo": "C8 OMEGA",
+      "time": "03:50",
+      "s": 230,
+      "prompt": "Ultimo close-up: una mirada directa, serena, irrevocable."
+    },
+    {
+      "n": 48,
+      "capitulo": "C8 OMEGA",
+      "time": "03:55",
+      "s": 235,
+      "prompt": "La imagen se disuelve en negro, dejando una resonancia breve."
+    },
+    {
+      "n": 49,
+      "capitulo": "C9 CODA",
+      "time": "04:00",
+      "s": 240,
+      "prompt": "Reaparicion fugaz de los simbolos clave en montaje rapido."
+    },
+    {
+      "n": 50,
+      "capitulo": "C9 CODA",
+      "time": "04:05",
+      "s": 245,
+      "prompt": "Corona fragmentada, archivo, herida, diamante, portal."
+    },
+    {
+      "n": 51,
+      "capitulo": "C9 CODA",
+      "time": "04:10",
+      "s": 250,
+      "prompt": "La figura camina fuera de cuadro sin romper la composicion."
+    },
+    {
+      "n": 52,
+      "capitulo": "C9 CODA",
+      "time": "04:15",
+      "s": 255,
+      "prompt": "Un ultimo brillo magenta se apaga lentamente."
+    },
+    {
+      "n": 53,
+      "capitulo": "C9 CODA",
+      "time": "04:20",
+      "s": 260,
+      "prompt": "El negro vuelve a cerrarse como una puerta."
+    },
+    {
+      "n": 54,
+      "capitulo": "C9 CODA",
+      "time": "04:25",
+      "s": 265,
+      "prompt": "Silence beat."
+    },
+    {
+      "n": 55,
+      "capitulo": "C10 EXTENSION",
+      "time": "04:30",
+      "s": 270,
+      "prompt": "La misma escena del origen, ahora transformada y estabilizada."
+    },
+    {
+      "n": 56,
+      "capitulo": "C10 EXTENSION",
+      "time": "04:35",
+      "s": 275,
+      "prompt": "El cuerpo aparece completo, monumental, sereno."
+    },
+    {
+      "n": 57,
+      "capitulo": "C10 EXTENSION",
+      "time": "04:40",
+      "s": 280,
+      "prompt": "Un halo dorado recorre los bordes de la silueta."
+    },
+    {
+      "n": 58,
+      "capitulo": "C10 EXTENSION",
+      "time": "04:45",
+      "s": 285,
+      "prompt": "El archivo se convierte en horizonte."
+    },
+    {
+      "n": 59,
+      "capitulo": "C10 EXTENSION",
+      "time": "04:50",
+      "s": 290,
+      "prompt": "La senal se vuelve cancion."
+    },
+    {
+      "n": 60,
+      "capitulo": "C10 EXTENSION",
+      "time": "04:55",
+      "s": 295,
+      "prompt": "Corte a negro con texto minimo: BELENTANI / JUDAS / OMEGA."
+    }
+  ]
+}
