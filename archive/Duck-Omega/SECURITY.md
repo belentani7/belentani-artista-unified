@@ -3,7 +3,7 @@
 ## Reporting a Vulnerability
 
 If you discover a security vulnerability in this project, please email
-[belentani7studio@proton.me](mailto:belentani7studio@proton.me)
+[[correo privado retirado]](mailto:[correo privado retirado])
 instead of using the issue tracker.
 
 Please include:
