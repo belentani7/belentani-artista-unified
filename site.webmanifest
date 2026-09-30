@@ -1,0 +1,12 @@
+{
+  "name": "BELENTANI — Máquina viva",
+  "short_name": "BELENTANI",
+  "description": "Música, narrativa y código en un mismo sistema.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#05030a",
+  "theme_color": "#05030a",
+  "icons": [{ "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

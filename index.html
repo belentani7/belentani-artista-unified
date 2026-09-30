@@ -1,33 +1,170 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#09080d" />
-  <meta name="description" content="Archivo vivo y galería 3D del universo artístico de Belentani." />
-  <title>BELENTANI / ARCHIVO VIVO</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BELENTANI — Máquina viva · Música, código y narrativa desde Barcelona</title>
+<meta name="description" content="BELENTANI: proyecto artístico de Pedro Belentani. Música, narrativa y código en un mismo sistema. Vidrio rojo neón, terminal vivo y el Protocolo de los 5 Elementos. Barcelona.">
+<meta name="author" content="Pedro Belentani">
+<meta name="theme-color" content="#05030a">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://belentani.es/">
+
+<meta property="og:type" content="music.musician">
+<meta property="og:site_name" content="BELENTANI">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="BELENTANI — Máquina viva">
+<meta property="og:description" content="Música, narrativa y código en un mismo sistema. Vidrio rojo neón y terminal vivo.">
+<meta property="og:url" content="https://belentani.es/">
+<meta property="og:image" content="https://belentani.es/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="BELENTANI en neón rojo sobre vidrio negro">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BELENTANI — Máquina viva">
+<meta name="twitter:description" content="Música, narrativa y código en un mismo sistema.">
+<meta name="twitter:image" content="https://belentani.es/assets/og.png">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Share+Tech+Mono&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Share+Tech+Mono&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Share+Tech+Mono&display=swap"></noscript>
+
+<link rel="stylesheet" href="assets/neoglass.css">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"MusicGroup","@id":"https://belentani.es/#artist","name":"Belentani","alternateName":"BELENTANI","genre":["Dark Pop","Electronic","Experimental"],"foundingLocation":{"@type":"Place","name":"Barcelona, España"},"url":"https://belentani.es/","image":"https://belentani.es/assets/og.png","description":"Proyecto artístico de Pedro Belentani: música, narrativa y código en un mismo sistema.","member":{"@type":"Person","@id":"https://belentani.es/#pedro"},"sameAs":["https://open.spotify.com/artist/2bU5Ir70YHHuUnq2f3WCYl","https://www.instagram.com/belentani_","https://www.youtube.com/@belentani","https://github.com/belentani7"]},
+ {"@type":"Person","@id":"https://belentani.es/#pedro","name":"Pedro Belentani","jobTitle":"Artista y desarrollador","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressCountry":"ES"},"knowsLanguage":["pt","es","ca","en"],"sameAs":["https://github.com/belentani7","https://www.instagram.com/belentani_"]},
+ {"@type":"WebSite","@id":"https://belentani.es/#web","url":"https://belentani.es/","name":"BELENTANI","inLanguage":"es","publisher":{"@id":"https://belentani.es/#artist"}}
+]}
+</script>
 </head>
 <body>
-  <div class="grain"></div>
-  <header class="topbar"><a class="brand" href="./">BELENTANI<span>®</span></a><span class="status"><i></i> ARCHIVO VIVO / <b id="count">00</b> PIEZAS</span><button id="shuffle" class="ghost">NUEVA VERSIÓN ↗</button></header>
-  <main>
-    <section class="hero">
-      <div class="eyebrow">ESTUDIO / MÚSICA / IMAGEN / CÓDIGO</div>
-      <h1>Una obra.<br><em>Muchas mutaciones.</em></h1>
-      <p class="intro">Un archivo visual navegable del universo de Belentani. Cada visita revela una versión distinta: portadas, experiencias Judas, interfaces Omega y laboratorios de sonido.</p>
-      <div class="hero-actions"><a class="primary" href="#gallery">ENTRAR AL ARCHIVO <span>↓</span></a><button id="auto" class="text-btn">ROTACIÓN AUTOMÁTICA <span class="dot"></span></button></div>
-    </section>
-    <section id="gallery" class="gallery-wrap">
-      <div class="section-head"><span>01 / SELECCIÓN DE ESTA VISITA</span><span id="rotation">ROTACIÓN PAUSADA</span></div>
-      <div id="featured" class="featured"></div>
-      <div class="section-head all"><span>02 / TODAS LAS VERSIONES</span><span>ARRASTRA PARA EXPLORAR</span></div>
-      <div id="grid" class="grid"></div>
-    </section>
-  </main>
-  <footer><span>BELENTANI / CREATIVE ARCHIVE</span><span>ORIGINALES PRESERVADOS · 2026</span></footer>
-  <script src="app.js"></script>
+<a class="ng-skip" href="#main">Saltar al contenido</a>
+
+<canvas id="core" aria-hidden="true"></canvas>
+<div class="ng-grain" aria-hidden="true"></div>
+<div class="ng-scan" aria-hidden="true"></div>
+
+<header class="bar">
+  <a class="bar__brand" href="#main"><span class="ng-neon--red">BELENTANI</span><i>®</i></a>
+  <nav class="bar__nav" aria-label="Principal">
+    <a href="#terminal">Terminal</a>
+    <a href="#protocolo">Protocolo</a>
+    <a href="#musica">Música</a>
+    <a href="#archivo">Archivo</a>
+  </nav>
+  <p class="bar__state"><span class="ng-led"></span> SISTEMA ACTIVO · 432 Hz</p>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <p class="ng-eyebrow ng-reveal">Barcelona · Música / Narrativa / Código</p>
+    <h1 class="ng-title hero__title ng-reveal">
+      <span class="ng-neon ng-flicker">BELENTANI</span>
+      <em class="ng-neon--red">máquina viva</em>
+    </h1>
+    <p class="hero__lead ng-reveal">No es un portfolio. Es un sistema que respira: una obra que se reescribe cada vez que alguien la mira. Vidrio rojo, señal continua, memoria intacta.</p>
+    <div class="hero__cta ng-reveal">
+      <a class="ng-btn ng-btn--solid" href="#musica">Escuchar <span aria-hidden="true">▸</span></a>
+      <a class="ng-btn ng-btn--ghost" href="#terminal">Abrir terminal</a>
+    </div>
+    <dl class="hero__stats ng-glass ng-glass--thin ng-reveal">
+      <div><dt>Frecuencia</dt><dd class="ng-neon--gold">432 Hz</dd></div>
+      <div><dt>Elementos</dt><dd class="ng-neon--red">05</dd></div>
+      <div><dt>Piezas vivas</dt><dd class="ng-neon--cyan" id="stat-pieces">14</dd></div>
+      <div><dt>Estado</dt><dd>ENTIDAD ACTIVA</dd></div>
+    </dl>
+  </section>
+
+  <section class="ng-section" id="terminal">
+    <div class="ng-wrap">
+      <p class="ng-rule"><b>01</b> Terminal vivo <span>el sistema habla solo</span></p>
+      <div class="term ng-glass ng-glass--slab ng-reveal">
+        <div class="term__bar"><span class="ng-led"></span><span class="ng-led ng-led--gold"></span><span class="ng-led ng-led--cyan"></span><em>belentani@omega — /núcleo</em></div>
+        <output class="term__out" id="term-out" aria-live="polite" aria-atomic="false"></output>
+        <form class="term__in" id="term-form" autocomplete="off">
+          <label for="term-cmd">Comando</label>
+          <span aria-hidden="true">❯</span>
+          <input id="term-cmd" name="cmd" type="text" placeholder="escribe «ayuda» y pulsa enter" spellcheck="false">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="ng-section" id="protocolo">
+    <div class="ng-wrap">
+      <p class="ng-rule"><b>02</b> Protocolo de los 5 elementos <span>la arquitectura de la obra</span></p>
+      <ul class="prot ng-reveal">
+        <li class="prot__c ng-glass" style="--e:#d4af37"><span class="prot__n">01</span><h3>PEDRO</h3><p class="prot__r">La Roca</p><p>El cuerpo que sostiene. Lo que no se mueve cuando todo lo demás tiembla.</p></li>
+        <li class="prot__c ng-glass" style="--e:#4de8e0"><span class="prot__n">02</span><h3>MARCOS</h3><p class="prot__r">El Cronista</p><p>La memoria. Escribe lo que pasó para que no se pueda negar después.</p></li>
+        <li class="prot__c ng-glass" style="--e:#8f6bff"><span class="prot__n">03</span><h3>SANTOS</h3><p class="prot__r">La Antena</p><p>La escucha. Capta la señal antes de que tenga nombre.</p></li>
+        <li class="prot__c ng-glass" style="--e:#ff073a"><span class="prot__n">04</span><h3>BELENTANI</h3><p class="prot__r">El Artefacto</p><p>La obra misma. Lo que queda cuando el autor se aparta.</p></li>
+        <li class="prot__c ng-glass" style="--e:#f4f0f2"><span class="prot__n">05</span><h3>THE HUMAN</h3><p class="prot__r">La Interfaz</p><p>Tú. Sin alguien mirando, la máquina es sólo corriente.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ng-section" id="musica">
+    <div class="ng-wrap">
+      <p class="ng-rule"><b>03</b> Música <span>producción: Duck Prod</span></p>
+      <div class="mus ng-reveal">
+        <div class="mus__card ng-glass ng-glass--slab">
+          <p class="ng-eyebrow">Single</p>
+          <h2 class="ng-title mus__title ng-neon--red">JUDAS</h2>
+          <p>Dark pop sobre la traición como acto de amor. Núcleo narrativo de la era Omega.</p>
+          <div class="mus__play" id="sp-facade">
+            <button class="ng-btn ng-btn--solid" type="button" id="sp-load">▸ Reproducir en Spotify</button>
+            <small>El reproductor sólo se carga si lo pides: ninguna cookie de terceros antes.</small>
+          </div>
+        </div>
+        <div class="mus__links">
+          <a class="mus__l ng-glass ng-glass--thin" href="https://open.spotify.com/artist/2bU5Ir70YHHuUnq2f3WCYl" target="_blank" rel="noopener me"><span>Spotify</span><i aria-hidden="true">↗</i></a>
+          <a class="mus__l ng-glass ng-glass--thin" href="https://www.youtube.com/@belentani" target="_blank" rel="noopener me"><span>YouTube</span><i aria-hidden="true">↗</i></a>
+          <a class="mus__l ng-glass ng-glass--thin" href="https://www.instagram.com/belentani_" target="_blank" rel="noopener me"><span>Instagram</span><i aria-hidden="true">↗</i></a>
+          <a class="mus__l ng-glass ng-glass--thin" href="https://github.com/belentani7" target="_blank" rel="noopener me"><span>GitHub</span><i aria-hidden="true">↗</i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ng-section" id="archivo">
+    <div class="ng-wrap">
+      <p class="ng-rule"><b>04</b> Archivo visual <span>pulsa para ver la pieza</span></p>
+      <ul class="gal" id="gal"></ul>
+    </div>
+  </section>
+
+  <section class="ng-section" id="contacto">
+    <div class="ng-wrap">
+      <div class="cta ng-glass ng-glass--slab ng-reveal">
+        <h2 class="ng-title cta__t">¿Trabajamos?</h2>
+        <p>Dirección de arte, web inmersiva, sistemas de IA aplicados a lo creativo. Barcelona o remoto.</p>
+        <a class="ng-btn ng-btn--solid" href="mailto:hola@belentani.es">hola@belentani.es</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>BELENTANI · Estudio digital · Barcelona</span>
+  <span>Máquina viva · <span id="year">2026</span></span>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Pieza del archivo">
+  <button class="lb__x" id="lb-x" aria-label="Cerrar">✕</button>
+  <figure class="lb__f"><img id="lb-img" alt="Pieza del archivo visual" width="1200" height="750"><figcaption id="lb-cap"></figcaption></figure>
+</dialog>
+
+<script src="js/omega-core.js" defer></script>
+<script src="app.js" defer></script>
 </body>
 </html>

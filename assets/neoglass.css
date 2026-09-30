@@ -1,0 +1,208 @@
+/* ============================================================
+   NEOGLASS // MÁQUINA VIVA  ·  v1.0
+   Sistema de diseño compartido del universo BELENTANI.
+   Concepto: vidrio rojo neón grueso, máquina viva, terminal vivo.
+   Drop-in: <link rel="stylesheet" href="assets/neoglass.css">
+   Licencia: MIT © Belentani
+   ============================================================ */
+
+/* ---------- 1. TOKENS ------------------------------------- */
+:root{
+  /* Identidad canónica */
+  --ng-black:#000000;
+  --ng-red:#ff073a;          /* rojo neón — color primario */
+  --ng-gold:#d4af37;         /* dorado Zion */
+  --ng-cyan:#4de8e0;         /* cyan señal */
+  --ng-white:#f4f0f2;
+
+  /* Profundidad del vacío */
+  --ng-void:#05030a;
+  --ng-void-2:#0b0610;
+  --ng-ink:var(--ng-white);
+  --ng-muted:#9a8f99;
+  --ng-dim:#6b626f;
+
+  /* Vidrio: tintes */
+  --ng-glass-tint:rgba(255,7,58,.055);
+  --ng-glass-body:rgba(18,6,14,.46);
+  --ng-glass-edge:rgba(255,7,58,.38);
+  --ng-glass-edge-hi:rgba(255,7,58,.85);
+  --ng-glass-spec:rgba(255,255,255,.22);
+
+  /* Dispersión cromática (refracción falsa pero convincente) */
+  --ng-disp-a:rgba(77,232,224,.30);   /* cyan  → un lado */
+  --ng-disp-b:rgba(212,175,55,.26);   /* dorado → el otro */
+
+  /* Grosor del vidrio */
+  --ng-thick:22px;
+  --ng-blur:26px;
+  --ng-radius:20px;
+  --ng-radius-sm:12px;
+
+  /* Neón */
+  --ng-glow-1:0 0 12px rgba(255,7,58,.65);
+  --ng-glow-2:0 0 34px rgba(255,7,58,.42);
+  --ng-glow-3:0 0 90px rgba(255,7,58,.22);
+  --ng-neon:var(--ng-glow-1),var(--ng-glow-2),var(--ng-glow-3);
+
+  /* Tipografía */
+  --ng-display:'Orbitron','Space Grotesk',system-ui,sans-serif;
+  --ng-mono:'Share Tech Mono','DM Mono',ui-monospace,'SFMono-Regular',monospace;
+
+  /* Ritmo */
+  --ng-pulse:4.32s;          /* 432 Hz → 4.32 s. La máquina respira en su frecuencia */
+  --ng-ease:cubic-bezier(.22,1,.36,1);
+
+  --ng-maxw:1340px;
+  --ng-gutter:clamp(18px,4vw,56px);
+}
+
+/* ---------- 2. BASE --------------------------------------- */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ng-void);color:var(--ng-ink);
+  font-family:var(--ng-mono);font-size:15px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,canvas,svg,video{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ng-red);outline-offset:3px;border-radius:4px}
+::selection{background:var(--ng-red);color:#fff}
+
+.ng-skip{position:absolute;left:-9999px;top:0;z-index:999;padding:14px 20px;background:var(--ng-red);color:#fff;font-family:var(--ng-mono)}
+.ng-skip:focus{left:12px;top:12px}
+
+/* ---------- 3. ATMÓSFERA ---------------------------------- */
+/* Grano de película — la máquina tiene ruido térmico */
+.ng-grain{
+  position:fixed;inset:-50%;z-index:2;pointer-events:none;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:ng-grain 620ms steps(3) infinite;
+}
+@keyframes ng-grain{0%{transform:translate(0,0)}33%{transform:translate(-2%,1%)}66%{transform:translate(1%,-2%)}100%{transform:translate(0,0)}}
+
+/* Líneas de barrido — el monitor vivo */
+.ng-scan{
+  position:fixed;inset:0;z-index:3;pointer-events:none;opacity:.35;
+  background:repeating-linear-gradient(180deg,rgba(255,7,58,.045) 0 1px,transparent 1px 3px);
+  mix-blend-mode:screen;
+}
+.ng-scan::after{
+  content:'';position:absolute;left:0;right:0;height:220px;
+  background:linear-gradient(180deg,transparent,rgba(255,7,58,.06),transparent);
+  animation:ng-sweep 7s linear infinite;
+}
+@keyframes ng-sweep{0%{top:-220px}100%{top:100%}}
+
+/* ---------- 4. VIDRIO GRUESO ------------------------------ */
+/* .ng-glass = la pieza base. Todo lo demás la hereda. */
+.ng-glass{
+  position:relative;isolation:isolate;
+  border-radius:var(--ng-radius);
+  background:
+    linear-gradient(160deg,var(--ng-glass-tint),transparent 42%),
+    linear-gradient(200deg,rgba(255,255,255,.05),transparent 30%),
+    var(--ng-glass-body);
+  backdrop-filter:blur(var(--ng-blur)) saturate(1.5) brightness(1.06);
+  -webkit-backdrop-filter:blur(var(--ng-blur)) saturate(1.5) brightness(1.06);
+  border:1px solid var(--ng-glass-edge);
+  box-shadow:
+    /* bisel interior: el canto del vidrio */
+    inset 0 1px 0 var(--ng-glass-spec),
+    inset 0 -1px 0 rgba(255,7,58,.30),
+    inset 0 var(--ng-thick) calc(var(--ng-thick) * 1.6) calc(var(--ng-thick) * -1.2) rgba(255,7,58,.38),
+    inset 0 calc(var(--ng-thick) * -1) calc(var(--ng-thick) * 1.4) calc(var(--ng-thick) * -1) rgba(0,0,0,.72),
+    /* dispersión: el vidrio parte la luz */
+    -1px 0 0 var(--ng-disp-a),
+     1px 0 0 var(--ng-disp-b),
+    /* cuerpo y halo */
+    0 26px 60px -24px rgba(0,0,0,.95),
+    0 0 70px -22px rgba(255,7,58,.50);
+  transition:border-color .5s var(--ng-ease),box-shadow .5s var(--ng-ease),transform .5s var(--ng-ease);
+}
+/* Reflejo especular que recorre la superficie */
+.ng-glass::before{
+  content:'';position:absolute;inset:0;border-radius:inherit;z-index:-1;pointer-events:none;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.10) 48%,transparent 58%);
+  opacity:.8;
+}
+/* Filo de neón en el borde superior */
+.ng-glass::after{
+  content:'';position:absolute;left:12%;right:12%;top:-1px;height:1px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--ng-glass-edge-hi),transparent);
+  box-shadow:var(--ng-glow-1);pointer-events:none;
+}
+.ng-glass:hover{
+  border-color:var(--ng-glass-edge-hi);
+  box-shadow:
+    inset 0 1px 0 var(--ng-glass-spec),
+    inset 0 -1px 0 rgba(255,7,58,.45),
+    inset 0 var(--ng-thick) calc(var(--ng-thick) * 1.6) calc(var(--ng-thick) * -1.1) rgba(255,7,58,.55),
+    inset 0 calc(var(--ng-thick) * -1) calc(var(--ng-thick) * 1.4) calc(var(--ng-thick) * -1) rgba(0,0,0,.72),
+    -2px 0 0 var(--ng-disp-a), 2px 0 0 var(--ng-disp-b),
+    0 34px 70px -24px rgba(0,0,0,.95),
+    0 0 110px -18px rgba(255,7,58,.62);
+}
+/* Variantes de grosor */
+.ng-glass--slab{--ng-thick:34px;--ng-blur:34px;--ng-radius:26px}
+.ng-glass--thin{--ng-thick:12px;--ng-blur:16px;--ng-radius:var(--ng-radius-sm)}
+
+/* ---------- 5. NEÓN TIPOGRÁFICO --------------------------- */
+.ng-neon{color:#fff;text-shadow:0 0 6px rgba(255,255,255,.55),0 0 16px var(--ng-red),0 0 42px rgba(255,7,58,.8),0 0 90px rgba(255,7,58,.45)}
+.ng-neon--red{color:var(--ng-red);text-shadow:0 0 10px rgba(255,7,58,.9),0 0 40px rgba(255,7,58,.55),0 0 100px rgba(255,7,58,.3)}
+.ng-neon--gold{color:var(--ng-gold);text-shadow:0 0 10px rgba(212,175,55,.85),0 0 38px rgba(212,175,55,.45)}
+.ng-neon--cyan{color:var(--ng-cyan);text-shadow:0 0 10px rgba(77,232,224,.85),0 0 38px rgba(77,232,224,.45)}
+/* Parpadeo de tubo: sutil, no epiléptico */
+.ng-flicker{animation:ng-flicker var(--ng-pulse) ease-in-out infinite}
+@keyframes ng-flicker{0%,100%{opacity:1}42%{opacity:.94}44%{opacity:1}72%{opacity:.97}}
+
+.ng-eyebrow{font-family:var(--ng-mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--ng-red)}
+.ng-title{font-family:var(--ng-display);font-weight:800;letter-spacing:-.02em;line-height:.92;margin:0}
+
+/* ---------- 6. CONTROLES ---------------------------------- */
+.ng-btn{
+  display:inline-flex;align-items:center;gap:14px;
+  font-family:var(--ng-mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+  padding:16px 26px;border-radius:999px;text-decoration:none;cursor:pointer;
+  color:var(--ng-ink);border:1px solid var(--ng-glass-edge);
+  background:linear-gradient(160deg,rgba(255,7,58,.16),rgba(18,6,14,.55));
+  backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 -10px 20px -12px rgba(255,7,58,.7),0 14px 34px -16px rgba(0,0,0,.9),0 0 34px -12px rgba(255,7,58,.5);
+  transition:.4s var(--ng-ease);
+}
+.ng-btn:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 -12px 24px -12px rgba(255,7,58,.9),0 18px 44px -16px rgba(0,0,0,.95),0 0 64px -10px rgba(255,7,58,.75);border-color:var(--ng-glass-edge-hi)}
+.ng-btn--solid{background:linear-gradient(160deg,var(--ng-red),#a80425);color:#fff;border-color:transparent}
+.ng-btn--ghost{background:rgba(255,255,255,.02);box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 0 26px -16px rgba(255,7,58,.5);color:var(--ng-muted)}
+.ng-btn--ghost:hover{color:var(--ng-ink)}
+
+/* ---------- 7. LED / ESTADO DE MÁQUINA -------------------- */
+.ng-led{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ng-red);box-shadow:var(--ng-glow-1);animation:ng-breathe var(--ng-pulse) ease-in-out infinite;flex:none}
+.ng-led--gold{background:var(--ng-gold);box-shadow:0 0 12px rgba(212,175,55,.8)}
+.ng-led--cyan{background:var(--ng-cyan);box-shadow:0 0 12px rgba(77,232,224,.8)}
+@keyframes ng-breathe{0%,100%{opacity:.35;transform:scale(.85)}50%{opacity:1;transform:scale(1.15)}}
+
+/* ---------- 8. LAYOUT ------------------------------------- */
+.ng-wrap{width:100%;max-width:var(--ng-maxw);margin-inline:auto;padding-inline:var(--ng-gutter)}
+.ng-section{position:relative;z-index:5;padding:clamp(64px,8vw,112px) 0}
+.ng-rule{display:flex;align-items:center;gap:18px;border-top:1px solid rgba(255,7,58,.16);padding-top:16px;margin-bottom:44px;font-family:var(--ng-mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ng-dim)}
+.ng-rule b{color:var(--ng-red);font-weight:400}
+.ng-rule span{margin-left:auto}
+
+/* ---------- 9. REVELADO AL SCROLL ------------------------- */
+.ng-reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ng-ease),transform .9s var(--ng-ease)}
+.ng-reveal.is-in{opacity:1;transform:none}
+
+/* ---------- 10. ACCESIBILIDAD ----------------------------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .ng-grain,.ng-scan::after{display:none}
+  .ng-reveal{opacity:1;transform:none}
+}
+/* Sin backdrop-filter (Firefox antiguo, GPU pobre): vidrio opaco pero coherente */
+@supports not (backdrop-filter:blur(1px)){
+  .ng-glass,.ng-btn{background:linear-gradient(160deg,rgba(255,7,58,.10),rgba(12,5,10,.94))}
+}
+@media (prefers-contrast:more){
+  :root{--ng-muted:#cfc7cd;--ng-dim:#b3aab1;--ng-glass-edge:rgba(255,7,58,.75)}
+}
