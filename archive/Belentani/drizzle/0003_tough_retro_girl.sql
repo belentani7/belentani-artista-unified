@@ -1,1 +1,0 @@
-ALTER TABLE `catalog_items` ADD `quarantineReason` text;

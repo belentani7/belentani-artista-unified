@@ -1,1 +1,0 @@
-ALTER TABLE `automation_jobs` ADD `callbackPath` varchar(120) DEFAULT '/api/scheduled/catalog-refresh' NOT NULL;

@@ -1,1 +1,0 @@
-ALTER TABLE `pvc_tenants` ADD `ownerOpenId` varchar(64) NOT NULL;
